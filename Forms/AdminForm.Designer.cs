@@ -28,12 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "AdminForm";
+            dgvGames = new DataGridView();
+            btnAddGame = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvGames).BeginInit();
+            SuspendLayout();
+            // 
+            // dgvGames
+            // 
+            dgvGames.Location = new Point(20, 20);
+            dgvGames.Name = "dgvGames";
+            dgvGames.Size = new Size(600, 300);
+            dgvGames.TabIndex = 0;
+            // 
+            // btnAddGame
+            // 
+            btnAddGame.Location = new Point(20, 340);
+            btnAddGame.Name = "btnAddGame";
+            btnAddGame.Size = new Size(156, 23);
+            btnAddGame.TabIndex = 1;
+            btnAddGame.Text = "Ajouter un jeu";
+            btnAddGame.Click += btnAddGame_Click;
+            // 
+            // AdminForm
+            // 
+            ClientSize = new Size(800, 450);
+            Controls.Add(dgvGames);
+            Controls.Add(btnAddGame);
+            Name = "AdminForm";
+            ((System.ComponentModel.ISupportInitialize)dgvGames).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dgvGames;
+        private Button btnAddGame;
     }
 }
